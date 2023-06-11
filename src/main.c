@@ -9,8 +9,8 @@ int int_comparator(const void* a, const void* b) {
 }
 
 int char_comparator(const void* a, const void* b) {
-	// сначала приводим void указатель к указателю на char
-	// затем разыменовываем его и получаем char
+	// СЃРЅР°С‡Р°Р»Р° РїСЂРёРІРѕРґРёРј void СѓРєР°Р·Р°С‚РµР»СЊ Рє СѓРєР°Р·Р°С‚РµР»СЋ РЅР° char
+	// Р·Р°С‚РµРј СЂР°Р·С‹РјРµРЅРѕРІС‹РІР°РµРј РµРіРѕ Рё РїРѕР»СѓС‡Р°РµРј char
 	char ca = *(char*)a;
 	char cb = *(char*)b;
 	if (ca > cb) return 1;
@@ -19,15 +19,15 @@ int char_comparator(const void* a, const void* b) {
 }
 
 int str_comparator(const void* a, const void* b) {
-	//сначала приводим void указатель к указателю на char*
-	// затем разыменовываем и получаем char*
+	//СЃРЅР°С‡Р°Р»Р° РїСЂРёРІРѕРґРёРј void СѓРєР°Р·Р°С‚РµР»СЊ Рє СѓРєР°Р·Р°С‚РµР»СЋ РЅР° char*
+	// Р·Р°С‚РµРј СЂР°Р·С‹РјРµРЅРѕРІС‹РІР°РµРј Рё РїРѕР»СѓС‡Р°РµРј char*
 	char* ca = *(char**)a;
 	char* cb = *(char**)b;
 	return strcmp(ca, cb);
 }
 
 int main(int argc, char** argv[]) {
-	// указатель на фукнцию comparator
+	// СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„СѓРєРЅС†РёСЋ comparator
 	int (*comparator) (const void*, const void*);
 	void* data;
 	int el_size;
@@ -44,8 +44,8 @@ int main(int argc, char** argv[]) {
 		comparator = char_comparator;
 		data = malloc(sizeof(char)*size);
 		for (int i = 0; i < size; i++) {
-			// argv[i] - строка, она является символом char + '\0'
-			// поэтому берем только 1-й символ
+			// argv[i] - СЃС‚СЂРѕРєР°, РѕРЅР° СЏРІР»СЏРµС‚СЃСЏ СЃРёРјРІРѕР»РѕРј char + '\0'
+			// РїРѕСЌС‚РѕРјСѓ Р±РµСЂРµРј С‚РѕР»СЊРєРѕ 1-Р№ СЃРёРјРІРѕР»
 			((char*)data)[i] = argv[i + 2][0];
 		}
 		el_size = sizeof(char);
