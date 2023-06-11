@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// typedef можно убрать и везде вместо него везде поставить unsigned int или просто int
+// typedef РјРѕР¶РЅРѕ СѓР±СЂР°С‚СЊ Рё РІРµР·РґРµ РІРјРµСЃС‚Рѕ РЅРµРіРѕ РІРµР·РґРµ РїРѕСЃС‚Р°РІРёС‚СЊ unsigned int РёР»Рё РїСЂРѕСЃС‚Рѕ int
 typedef unsigned long long int size_t;
 
 int mergesort(void* arr, size_t elements, size_t element_size,
