@@ -56,7 +56,7 @@ int main(int argc, char** argv[]) {
 		for (int i = 0; i < size; i++) {
 			((char**)data)[i] = argv[i + 2];
 		}
-		el_size = sizeof(char**);
+		el_size = sizeof(char*);
 	}
 	if (mergesort(data, size, el_size, comparator)) {
 		printf("Error: memory allocation failed");
