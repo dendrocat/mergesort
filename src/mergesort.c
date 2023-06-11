@@ -17,9 +17,9 @@ int mergesort(void* arr, size_t elements, size_t element_size,
 	
 	while (size_prom_arr < elements) {
 		size_t step = size_prom_arr;
-		int p_arr = 0, k = 0; // p_arr - позиция первого массива для слияния
+		size_t p_arr = 0, k = 0; // p_arr - позиция первого массива для слияния
 		while (p_arr < elements) {
-			int i = p_arr, j = p_arr + step;
+			size_t i = p_arr, j = p_arr + step;
 			// i - позиция элемента первого массива для слияния, j - второго
 			// цикл для слияния массивов
 			while ((i < p_arr + step) && (j < elements) && (j < p_arr + 2 * step)) {
