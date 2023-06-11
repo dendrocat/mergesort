@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mergesort.h"
+#include "../mergesort/src_h/mergesort.h"
 
 int int_comparator(const void* a, const void* b) {
 	return *(int*)a - *(int*)b;
