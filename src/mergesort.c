@@ -1,4 +1,4 @@
-#include "mergesort.h"
+#include "../mergesort/src_h/mergesort.h"
 
 int mergesort(void* arr, size_t elements, size_t element_size,
 	int (*comparator)(const void*, const void*))
