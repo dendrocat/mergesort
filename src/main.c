@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
 #include "mergesort.h"
 
 int int_comparator(const void* a, const void* b) {
