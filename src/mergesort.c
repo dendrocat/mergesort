@@ -7,7 +7,6 @@ int mergesort(void* arr, size_t elements, size_t element_size,
 	void* res_arr = malloc(elements * element_size);
 	if (!res_arr) return 1;
 	// переводим все void указатели в char указатели
-	// вообще хз, почему именнно в char*, но с int* не работает)
 	// зачем переводим? да чтоб была возможность проходить по массиву с помощью арифметики указателей
 	// у void* не работает арифметика указателей
 	char* res_arr0 = res_arr;
@@ -23,7 +22,6 @@ int mergesort(void* arr, size_t elements, size_t element_size,
 			// i - позиция элемента первого массива для слияния, j - второго
 			// цикл для слияния массивов
 			while ((i < p_arr + step) && (j < elements) && (j < p_arr + 2 * step)) {
-				// хуйняяяяяя с указателем на void
 				// element_size - размер элемента в байтах
 				// i * element_size - сдвиг на i элементов
 				// arr0 + i * element_size - получение i-того элемента массива arr
@@ -32,7 +30,6 @@ int mergesort(void* arr, size_t elements, size_t element_size,
 				// res - результат сравнения, comparator работает также как и strcmp
 				res = comparator(a, b);
 				if (res < 0) {
-					// приколы с указателем на void
 					// из-за того, что указатель на void нельзя разыменовать,
 					// приходится копировать весь участок памяти, на который указывает void указатель
 					memcpy(res_arr0 + k * element_size, a, element_size);
